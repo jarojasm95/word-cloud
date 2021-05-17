@@ -1,18 +1,3 @@
-kafdrop:
-  kafka:
-    brokerConnect: "kafka-cluster-kafka-bootstrap:9092"
-  nameOverride: "kafdrop"
-  fullnameOverride: "kafdrop"
-  image:
-    repository: obsidiandynamics/kafdrop
-    tag: "3.27.0"
-    pullPolicy: IfNotPresent
-  jvm:
-    opts: "-Xms32M -Xmx64M"
-  service:
-    type: LoadBalancer
-    port: 80
-
+kafka: "kafka-cluster-kafka-bootstrap:9092"
 fluentbit:
   port: 24224
-  kafka: "kafka-cluster-kafka-bootstrap:9092"

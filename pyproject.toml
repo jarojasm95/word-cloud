@@ -17,7 +17,6 @@ python = "^3.8"
 starlette = "^0.14.2"
 beautifulsoup4 = "^4.9.3"
 nltk = "^3.6.2"
-respx = "^0.17.0"
 uvicorn = "^0.13.4"
 wordcloud = "^1.8.1"
 aiofiles = "^0.7.0"
@@ -26,6 +25,7 @@ redis = "^3.5.3"
 aiofluent-python = "^0.3.0"
 
 [tool.poetry.dev-dependencies]
+black = "^21.5b1"
 
 
 [build-system]

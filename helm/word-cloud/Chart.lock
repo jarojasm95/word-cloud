@@ -2,8 +2,5 @@ dependencies:
 - name: strimzi-kafka-operator
   repository: https://strimzi.io/charts
   version: 0.23.0
-- name: kafdrop
-  repository: file://../kafdrop
-  version: 0.1.0
-digest: sha256:9a2b4f80847970ad763c7837b47c8e2f7e728a3bf009acab8e1d254573113bb3
-generated: "2021-05-17T10:06:56.972421-06:00"
+digest: sha256:4543c714c2fed4e7680c08bfbf9e6c72dbc9c529e67d821673bf9a9ce75b4182
+generated: "2021-05-17T11:31:36.423881-06:00"

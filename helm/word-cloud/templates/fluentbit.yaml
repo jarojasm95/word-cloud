@@ -76,7 +76,7 @@ data:
     [OUTPUT]
         Name                            kafka
         Match                           kafka.*
-        Brokers                         {{ .Values.fluentbit.kafka }}
+        Brokers                         {{ .Values.kafka }}
         Topics                          word-cloud
         Topic_Key                       topic
         Message_Key_Field               key
