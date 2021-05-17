@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+  labels:
+    project: {{ .Chart.Name }}
+    name: redis
+spec:
+  selector:
+    matchLabels:
+      name: redis
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 100%
+  template:
+    metadata:
+      labels:
+        project: {{ .Chart.Name }}
+        name: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:5.0.5-alpine
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 6379
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+  labels:
+    project: {{ .Chart.Name }}
+    name: redis
+spec:
+  type: LoadBalancer
+  selector:
+    name: redis
+  ports:
+  - protocol: TCP
+    port: 6379
+    targetPort: 6379
