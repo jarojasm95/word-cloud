@@ -1,0 +1,21 @@
+name: word-cloud
+apiVersion: v2
+version: 0.1.0
+appVersion: 0.1.0
+description: A simple word-cloud service
+keywords:
+- word-cloud
+home: https://github.com/jarojasm95/word-cloud
+sources:
+- https://github.com/jarojasm95/word-cloud
+maintainers:
+- name: jarojasm95
+  email: jose.rojas@email.com
+engine: gotpl
+dependencies:
+- name: strimzi-kafka-operator
+  version: "0.23.0"
+  repository: "https://strimzi.io/charts"
+- name: kafdrop
+  version: "0.1.0"
+  repository: "file://../kafdrop"
